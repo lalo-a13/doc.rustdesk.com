@@ -22,7 +22,7 @@ In this example we will follow what happens when LAN devices try connecting to `
 
 When you setup a server behind the router's NAT you can add a port forward in the router to change any incoming messages to the PUBLIC IP 172.16.16.1 to go to the server at 192.168.11.20
 
-When a LAN device wants to access the internet, say a webserver on 8.8.8.8, it sends the request as coming from 192.168.11.2, and sends it to the router.  The router will intercept that request and will rewrite that request to 8.8.8.8 as coming from 172.16.16.1.  When 8.8.8.8 replies to 172.16.16.1 the router will check for a previous conneciton and re route that responce back to 192.168.11.2.
+When a LAN device wants to access the internet, say a webserver on 8.8.8.8, it sends the request as coming from 192.168.11.2, and sends it to the router.  The router will intercept that request and will rewrite that request to 8.8.8.8 as coming from 172.16.16.1.  When 8.8.8.8 replies to 172.16.16.1 the router will check for a previous connection and re route that responce back to 192.168.11.2.
 
 If the user at 8.8.8.8 sends a message to our network using 172.16.16.1 the port forward rule will rewrite the destination of 172.16.16.1 to the server at 192.168.11.20 leaving the source of the request as 8.8.8.8 so the server can respond (more or less) direclty to 8.8.8.8.
 
